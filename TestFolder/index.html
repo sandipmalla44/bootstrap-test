@@ -1,35 +1,47 @@
 <html> 
     <head>
         <title>First Test</title>
+        <!---->
     </head>
+    <link rel="stylesheet" href="style.css"/>
+    
     <body>
+        <div class="container">
         <header>
-            <h1>Hey World!</h1>
             <nav>
-                <ol>
+                <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-            </ol>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Address</a></li>
+                </ul>
             </nav>
+            <div><img src="../images/BDlogo.png" class="bordered-image" alt="Logo" style="height: 50px; width: 80px;"></div>
+            <h1>Hey World!</h1>
+            
         </header>
-        <section>
+        <section id="main">
             <p>Hey I am new to this so trying my best</p>
-        </section>
-        <form action="http://wilder.azurewebsites.net/echo">
-            <input name="searchPhrase"/><br/>
-            <input type="checkbox" name="useStars" checked="true"/>Use Stars?<br/>
-            <input type="submit" value="Search"/>
-
-            <select name="langChoice">
+        <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+            <label for="searchPhrase">Search Phrase:</label>
+            <input name="searchPhrase" id="searchPhrase"/><br/>
+            <input type="checkbox" name="useStars" id="useStars" checked="true"/><label for="useStars"> Stars?</label><br/>
+            <label for="langChoice">Language:</label>
+            <select name="langChoice" id="langChoice">
                 <option>All</option>
                 <option>Java</option>
                 <option selected>c#</option>
             </select>
             <br/>
+            <input type="submit" value="Search"/>
         </form>
+        <div id="results" class="bordered-image">
+            This is where results will be.
+        </div>
+    </section>
         <footer>
             &copy; 2020 Sandy
         </footer>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
