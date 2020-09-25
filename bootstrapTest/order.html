@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="view-port" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Mero SHOP</a>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="seasonalpies.html">Pies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="order.html">Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="jumbotron jumbotron-other container-fluid">
+                <div class="container">
+                    <h1 class="display-3 text-white">Ready To Order? So are we!</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="p-2 pt-md-4 pb-md-3 mx-auto text-center">
+                    <h1 class="display-4">Your Details</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-2">
+                        <h4 class="mb-3">Your Address</h4>
+                        <form action="order.html" method="get">
+                            <div class="row">
+                                <div class="col-md-6 mb-3 form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Your First Name" value="">
+                                </div>
+                                <div class="col-md-6 mb-3 form-group">
+                                    <label for="lastName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Your Last Name" value="">
+                                </div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="emailAddress">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="emailAddress" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="address">Email</label>
+                                <input type="text" class="form-control" id="address" placeholder="Address">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 form-group">
+                                    <label for="zip">ZIP Code</label>
+                                    <input type="text" class="form-control" id="zip" placeholder="Zip" value="">
+                                </div>
+                                <div class="col-md-6 mb-3 form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city" placeholder="City" value="">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3 form-group">
+                                    <label for="state">State</label>
+                                    <select class="custom-select w-100" id="state">
+                                        <option value="">-Select State-</option>
+                                        <option>Province No. 1</option>
+                                        <option>Province No. 2</option>
+                                        <option>Province No. 3</option>
+                                        <option>Province No. 4</option>
+                                        <option>Province No. 5</option>
+                                        <option>Province No. 6</option>
+                                        <option>Province No. 7</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-5 mb-3 form-group">
+                                    <label for="country">Country</label>
+                                    <select class="custom-select w-100" id="country">
+                                        <option value="">-Select Country-</option>
+                                        <option>Nepal</option>
+                                        <option>India</option>
+                                        <option>Pakistan</option>
+                                        <option>Bhutan</option>
+                                        <option>Bangladesh</option>
+                                        <option>Sri Lanka</option>
+                                        <option>Maldives</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="remarks">Remarks</label>
+                                    <textarea class="form-control" id="remarks" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="saveShipping">
+                                    <label class="custom-control-label" for="saveShipping">Remember my Shipping Information</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-success btn-lg btn-block mb-3" type="submit">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
