@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Site</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="Content/bootstrap.min.css">
+        <link rel="stylesheet" href="Content/pdsa-sidebar.css">
+        <link rel="stylesheet" href="Content/pdsa-summary-block.css">
+        <link rel="stylesheet" href="Content/pdsa-readme-box.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* body {
+                height: 100vh;
+                width: 100vw;
+            }
+            .container {
+                height: 100%;
+                width: 100%;
+            } */
+            /* .container-fluid .cont-fix {
+                position: fixed;
+                margin-top: 0em;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid fixed-top">
+            <div class="row">
+                <header>
+                    <a href="Default.html">My Tunes</a>
+                </header>
+            </div>
+            <nav id="sideNavParent" class="pdsa-sn-wrapper">
+                <ul>
+                    <li class="pdsa-sn-brand">
+                        <a class="d-none d-md-block" href="Default.html">Music</a>
+                    </li>
+                    <li>
+                        <a href="Default.html">
+                            <span class="d-none d-md-block">Home</span>
+                            <i class="fa fa-home fa-lg d-none d-sm-block d-md-none"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown" data-toggle="collapse" data-target="#ulGenre">
+                            <span class="d-none d-md-block">Genre&nbsp;<i class="fa fa-caret-down"></i></span>
+                            <i class="fa fa-globe fa-lg d-none d-sm-block d-md-none"></i>
+                        </a>
+                        <div class="d-none d-md-block">
+                            <ul id="ulGenre" class="collapse list-unstyled" data-parent="#sideNavParent">
+                                <li>
+                                    <a href="Genres.html">All Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">Jazz</a>
+                                </li>
+                                <li>
+                                    <a href="#">Country</a>
+                                </li>
+                                <li>
+                                    <a href="#">Rock</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#ulPlaylist">
+                            <span class="d-none d-md-block">Playlists&nbsp;<i class="fa fa-caret-down"></i></span>
+                            <i class="fa fa-list-alt fa-lg d-none d-sm-block d-md-none"></i>
+                        </a>
+                        <div class="d-none d-md-block">
+                            <ul id="ulPlaylist" class="collapse list-unstyled" data-parent="#sideNavParent">
+                                <li>
+                                    <a href="#">All Playlists</a>
+                                </li>
+                                <li>
+                                    <a href="#">My Top Rated</a>
+                                </li>
+                                <li>
+                                    <a href="#">Top Country</a>
+                                </li>
+                                <li>
+                                    <a href="#">Top Classic Rock</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Default.html">
+                            <span class="d-none d-md-block">Songs</span>
+                            <i class="fa fa-music fa-lg d-none d-sm-block d-md-none"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Default.html">
+                            <span class="d-none d-md-block">Downloads</span>
+                            <i class="fa fa-download fa-lg d-none d-sm-block d-md-none"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container body-content">
+            <div class="row">
+                <div class="text-center col-sm-6">
+                    <h3>Displaying following Genres</h3>
+                    <div class="card card-sm">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="songSelect">
+                            <label class="btn btn-primary">
+                                <span class="fa fa-circle"></span>
+                                <input type="radio" /> All Songs
+                            </label>
+                            <label class="btn btn-primary">
+                                <span class="fa fa-dot-circle-o"></span>
+                                <input type="radio" /> Selected 
+                            </label>
+                            <label class="btn btn-primary">
+                                <span class="fa fa-circle"></span>
+                                <input type="radio"/> Unselected
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+               $("#songSelect .btn").on("click", function () {
+                   ToggleRadioButtons("#songSelect", $(this));
+               });
+            });
+            function ToggleRadioButtons(groupName, current) {
+                $(groupName + " .fa-dot-circle-o")
+                .removeClass("fa-dot-circle-o")
+                .addClass("fa-circle");
+
+                current.find(":first-child")
+                .removeClass("fa-circle")
+                .addClass("fa-dot-circle-o");
+            }
+        </script>
+    </body>
+</html>
